@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiene es This</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const fran = {
+            nombre: 'Francisco',
+            apelli: 'Garcia',
+            edad: 52
+        }
+        
+        const juanda = {
+            nombre: 'Juan David',
+            apelli: 'Garcia',
+            edad: 19
+        }
+
+
+        function saludar(saludo = 'Hola') {
+            console.log(`${saludo}, mi nombres es: ${this.nombre}`)
+        }
+
+
+        // SI NO LO UNO CON bind ME DICE UNDEFINED
+        // El this es fran
+        // BIND no llama la funcion solo une el this y nada mas
+        const saludarAFran = saludar.bind(fran)
+
+        // El this es juanda
+        const saludarAJuanda = saludar.bind(juanda)
+
+        setTimeout(saludar.bind(fran, 'JOLAAAA'), 2000)
+        setTimeout(saludar.bind(juanda, 'HELOOO'), 3000)
+
+
+         /* call y apply llaman o invocan la funcion*/
+        // Une y tras de el echo ejecuta la funcion
+        saludar.call(fran)
+        saludar.call(juanda)
+
+        
+        // Une Ejecuta, y le pasa el parameti de la funcion
+        saludar.call(juanda, 'Hola che')
+        saludar.call(fran, 'Hola parce')
+
+        // Une Ejecuta, y le pasa el parameti de la funcion pero los
+        // parametros van dentro de un arreglo
+        saludar.apply(fran, ['Hola che'])
+        saludar.apply(juanda, ['Hola parce'])
+</script>
+</html>

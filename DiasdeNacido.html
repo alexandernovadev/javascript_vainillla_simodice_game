@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias de nacido</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function diasEntreFechas(fecha1, fecha2) {
+            // Un dia tiene 1000 miloseg * 60 segundos *60 min * 24 horas 
+            const unDia = 1000 * 60 * 60 * 24
+            // Valor absoluto
+            const diferencia = Math.abs(fecha1 - fecha2)
+
+            console.log( Math.floor(diferencia / unDia));
+            
+            return Math.floor(diferencia / unDia)
+        }
+
+        const hoy = new Date()
+        const nacimiento = new Date(1995, 8, 11)
+
+        diasEntreFechas(hoy, nacimiento)
+</script>
+</html>

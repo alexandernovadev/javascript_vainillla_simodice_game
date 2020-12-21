@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Recursiva</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Modulo (residuo de una division entera)
+//Devuelve el residuo resultado de una division entera dados el diviendo y el divisor
+function residuoDivisionEntera(dividendo, divisor){
+    if(dividendo < divisor){
+        return dividendo;
+    }
+    else{
+        return residuoDivisionEntera(dividendo - divisor, divisor);
+    }
+}
+
+//Division entera
+//Devuelve el residuo resultado de una division entera dados el diviendo y el divisor
+function divisionEntera(dividendo, divisor){
+    if(dividendo < divisor){
+        return 0;
+    }
+    else{
+        return 1 + divisionEntera(dividendo - divisor, divisor);
+    }
+}
+
+console.log(divisionEntera(12,8));
+console.log(residuoDivisionEntera(12,8));
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simon Dice</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <div class="gameboard">
+        <!-- data-color    es -->
+      <div id="celeste" class="color celeste left" data-color="celeste"0></div>
+      <div id="violeta" class="color violeta right" data-color="violeta">1</div>
+      <div id="naranja" class="color naranja left" data-color="naranja">2</div>
+      <div id="verde" class="color verde right" data-color="verde">3</div>
+      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    </div>
+   
+    <div class="tablero">
+      <p class="txttrurno">TURNO DE</p>
+      <div id="turnode"></div>
+      <p><b>NIVEL</b></p>
+      <p id="numero_nivel"> </p> 
+    </div>
+    <script src="data.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Memoizacion</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function factorial_recursivo(numero) {
+        
+        // Cada funcion tiene una cache
+        if(!this.cache) {
+            this.cache = {}
+        }
+
+        if (this.cache[numero]) {
+            return this.cache[numero]
+        }
+
+        if (numero === 1) {
+            return 1
+        }
+
+        this.cache[numero] = numero * factorial_recursivo(numero - 1)
+        return this.cache[numero]
+    }
+</script>
+</html>
